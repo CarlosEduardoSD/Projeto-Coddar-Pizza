@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.body-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.register {
+  width: 1068px;
+  height: 812px;
+  border: 1px solid #707070;
+  border-radius: 20px;
+}
+
+.register-first-part {
+  display: inline-block;
+  position: relative;
+  background-image: url("./../../assets/images/image_registerpage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 527px;
+  height: 792px;
+  margin-top: 7px;
+}
+
+.register-first-part h1 {
+  color: #ef4c00;
+  display: flex;
+  justify-content: center;
+  font-size: 33px;
+  margin-top: 12px;
+  opacity: 1;
+  font-family: montserrat;
+}
+.register-first-part h2 {
+  color: #ff5100;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: -10px;
+  font-family: montserrat;
+}
+.register-imagem {
+  margin-top: 10px;
+}
+.register-icons {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 680px;
+  gap: 13px;
+  font-family: Montserrat;
+}
+
+.register-download-Apple,
+.register-download-Google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ff0043;
+  width: 116px;
+  height: 39px;
+  opacity: 1;
+  border-radius: 5px;
+  border-color: #ff0043;
+}
+.register-Apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 116px;
+  height: 39px;
+}
+.register-AppleIcon {
+  width: 22px;
+}
+.register-download,
+.register-download-google {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  height: 39px;
+}
+
+.download-on-the {
+  font-size: 10px;
+  margin-top: 3px;
+}
+.AppStore,
+.GooglePlay {
+  margin-top: -21px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-it-on {
+  font-size: 11px;
+  margin-top: 3px;
+}
+.register-GoogleIcon {
+  width: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-second-part {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.register-second-part h2 {
+  font-weight: 600;
+  font-size: 17px;
+  color: #b30733;
+  font-family: roboto;
+  opacity: 1;
+  margin: 56px 0 9px 0;
+}
+.register-second-part hr {
+  width: 51px;
+  color: #ef4c00;
+  text-align: center;
+  border: 1px solid #ef4c00;
+  border-radius: 3px ;
+  opacity: 1;
+  margin: 0;
+}
+.regular {
+  width: 456px;
+  border: 1px solid #2e4765;
+  opacity: 0.2;
+  margin: 21.6px 0 31.99px;
+}
+.register-input-box {
+  margin-bottom: 19px;
+}
+.register-input-box input {
+  border: 1px solid #707070;
+  border-radius: 26px;
+  width: 287px;
+  height: 39px;
+}
+
+.register-input-box input::placeholder {
+  color: #2e4765;
+  font-size: 12px;
+  font-family: Roboto;
+  opacity: 0.75;
+  position: relative;
+  left: 23px;
+  bottom: 2px;
+}
+
+.register-button {
+  width: 273px;
+  height: 35px;
+  margin-top: 106px;
+  background-color: #ef4c00;
+  color: #ffffff;
+  border-radius: 36px;
+  border: none;
+  font-size: 19px;
+  text-align: center;
+  font-family: Josefin Sans;
+}
+
+.register-footer {
+  font-family: Josefin Sans;
+  color: #000000;
+  font-size: 14px;
+  opacity: 1;
+  position: relative;
+  top: 260px;
+  left: 150px;
+}
