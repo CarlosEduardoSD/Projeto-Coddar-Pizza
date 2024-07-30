@@ -6,7 +6,7 @@ import bag from "../assets/img/bag.svg";
 
 import { FaCartArrowDown } from "react-icons/fa6";
 
-export default function header() {
+export default function Header() {
   return (
     <>
       <div className="container-fluid">
