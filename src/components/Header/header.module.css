@@ -6,14 +6,6 @@
   font-family: Montserrat;
 }
 
-/* .header_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 12px;
-} */
-
 .header_title {
   text-align: left;
   letter-spacing: 0px;
@@ -29,14 +21,15 @@
   list-style: none;
   gap: 50px;
   align-items: center;
-  /* justify-content: space-evenly; */
   left: 45px;
   margin: 0;
+  /* margin-right: 110vh; */
 }
 
 .button {
   display: flex;
   align-items: center;
+  justify-items: flex-end;
 }
 
 .header_menu_list:hover {
@@ -52,13 +45,6 @@
 .header_menu_list li:hover {
   border-bottom: 2px solid #ef4c00;
 }
-
-/* .header_text {
-    display: flex;
-    justify-content: end;
-    margin-left: auto;
-    
-} */
 
 .home_img {
   display: flex;
@@ -77,7 +63,7 @@
   justify-content: right;
   border-radius: 8px;
   opacity: 1;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .button_cart {
