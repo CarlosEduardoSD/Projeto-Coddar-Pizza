@@ -16,11 +16,15 @@
 }
 
 .register-first-part {
-  display: inline-block;
-  position: relative;
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* position: relative; */
   background-image: url("./../../assets/images/image_registerpage.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 527px;
   height: 792px;
   margin-top: 7px;
@@ -51,23 +55,39 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 680px;
+  /* height: 680px; */
   gap: 13px;
   font-family: Montserrat;
+  background-color: transparent;
+  margin-bottom: 28px;
 }
 
-.register-download-Apple,
 .register-download-Google {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   background-color: #ff0043;
-  width: 116px;
-  height: 39px;
+  width: 140px;
+  height: 49px;
   opacity: 1;
   border-radius: 5px;
-  border-color: #ff0043;
+  /* border-color: #ff0043; */
+  border: none;
+}
+
+.register-download-Apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #B30733;
+  width: 140px;
+  height: 49px;
+  /* opacity: 1; */
+  border-radius: 5px;
+  /* border-color: #B30733; */
+  border: none;
 }
 .register-Apple {
   display: flex;
@@ -147,6 +167,8 @@
   border-radius: 26px;
   width: 287px;
   height: 39px;
+  padding-left: 23px;
+  background-color: #F4F9FF
 }
 
 .register-input-box input::placeholder {
@@ -154,9 +176,9 @@
   font-size: 12px;
   font-family: Roboto;
   opacity: 0.75;
-  position: relative;
+  /* position: relative;
   left: 23px;
-  bottom: 2px;
+  bottom: 2px; */
 }
 
 .register-button {
@@ -180,4 +202,8 @@
   position: relative;
   top: 260px;
   left: 150px;
+}
+
+.register-footer p {
+  margin: 0;
 }
