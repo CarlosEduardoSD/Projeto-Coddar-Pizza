@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./header.module.css";
 
-import Perfil from "../assets/img/ft_perfil.jpg";
-import bag from "../assets/img/bag.svg";
+import Perfil from "../../assets/img/ft_perfil.jpg";
+// import bag from "../assets/img/bag.svg";
 
 import { FaCartArrowDown } from "react-icons/fa6";
 
@@ -19,9 +19,9 @@ export default function Header() {
           </div>
           <div
             className="col-md-8"
-            style={{ display: "flex", justifyContent: "space-between" }}
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            // style={{ display: "flex", justifyContent: "space-between" }}
           >
-            {/* <div className={styles.header_text}> */}
             <ul className={styles.header_menu_list}>
               <li>
                 <a href="#search">Buscar</a>
@@ -40,7 +40,8 @@ export default function Header() {
               </li>
             </ul>
             <div className={styles.home_img}>
-              <img className="img-fluid" src={Perfil} alt="Foto Perfil" />
+              <img className="img" src={Perfil} alt="Foto Perfil" />
+              {/* img classname="img-fluid" */}
             </div>
             <div
               style={{
