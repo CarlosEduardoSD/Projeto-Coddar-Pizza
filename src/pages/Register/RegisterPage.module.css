@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.body-register {
+.body_register {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
   border-radius: 20px;
 }
 
-.register-first-part {
+.register_first_part {
   /* display: inline-block; */
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
   margin-top: 7px;
 }
 
-.register-first-part h1 {
+.register_first_part h1 {
   color: #ef4c00;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@
   opacity: 1;
   font-family: montserrat;
 }
-.register-first-part h2 {
+.register_first_part h2 {
   color: #ff5100;
   font-size: 21px;
   display: flex;
@@ -48,10 +48,10 @@
   margin-top: -10px;
   font-family: montserrat;
 }
-.register-imagem {
+.register_imagem {
   margin-top: 10px;
 }
-.register-icons {
+.register_icons {
   display: flex;
   justify-content: center;
   align-items: end;
@@ -62,7 +62,7 @@
   margin-bottom: 28px;
 }
 
-.register-download-Google {
+.register_download_Google {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,12 +76,12 @@
   border: none;
 }
 
-.register-download-Apple {
+.register_download_Apple {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background-color: #B30733;
+  background-color: #b30733;
   width: 140px;
   height: 49px;
   /* opacity: 1; */
@@ -89,54 +89,37 @@
   /* border-color: #B30733; */
   border: none;
 }
-.register-Apple {
+.register_Apple {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 116px;
   height: 39px;
 }
-.register-AppleIcon {
+.register_AppleIcon {
   width: 22px;
 }
-.register-download,
-.register-download-google {
+.register_download,
+.register_download_google {
   display: flex;
   flex-direction: column;
   width: 80px;
   height: 39px;
 }
 
-.download-on-the {
-  font-size: 10px;
-  margin-top: 3px;
-}
-.AppStore,
-.GooglePlay {
-  margin-top: -21px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.get-it-on {
-  font-size: 11px;
-  margin-top: 3px;
-}
-.register-GoogleIcon {
+.register_GoogleIcon {
   width: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.register-second-part {
+.register_second_part {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.register-second-part h2 {
+.register_second_part h2 {
   font-weight: 600;
   font-size: 17px;
   color: #b30733;
@@ -144,12 +127,12 @@
   opacity: 1;
   margin: 56px 0 9px 0;
 }
-.register-second-part hr {
+.register_second_part hr {
   width: 51px;
   color: #ef4c00;
   text-align: center;
   border: 1px solid #ef4c00;
-  border-radius: 3px ;
+  border-radius: 3px;
   opacity: 1;
   margin: 0;
 }
@@ -159,19 +142,19 @@
   opacity: 0.2;
   margin: 21.6px 0 31.99px;
 }
-.register-input-box {
+.register_input_box {
   margin-bottom: 19px;
 }
-.register-input-box input {
+.register_input_box input {
   border: 1px solid #707070;
   border-radius: 26px;
   width: 287px;
   height: 39px;
   padding-left: 23px;
-  background-color: #F4F9FF
+  background-color: #f4f9ff;
 }
 
-.register-input-box input::placeholder {
+.register_input_box input::placeholder {
   color: #2e4765;
   font-size: 12px;
   font-family: Roboto;
@@ -181,7 +164,7 @@
   bottom: 2px; */
 }
 
-.register-button {
+.register_button {
   width: 273px;
   height: 35px;
   margin-top: 106px;
@@ -194,7 +177,7 @@
   font-family: Josefin Sans;
 }
 
-.register-footer {
+.register_footer {
   font-family: Josefin Sans;
   color: #000000;
   font-size: 14px;
@@ -204,6 +187,6 @@
   left: 150px;
 }
 
-.register-footer p {
+.register_footer p {
   margin: 0;
 }
