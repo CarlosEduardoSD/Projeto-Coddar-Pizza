@@ -40,6 +40,7 @@ function RegisterPage() {
                       <p
                         style={{
                           backgroundColor: "transparent",
+                          
                           fontSize: "11px",
                           margin: "0",
                         }}

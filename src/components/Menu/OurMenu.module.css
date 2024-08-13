@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body_ourmenu {
+  width: 100vw;
+  height: 100vb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+.ourmenu {
+  width: 1063px;
+  background-color: #F5F5F5;
+}
+.menu_ourmenu h2 {
+  font-family: montserrat;
+  color: #b30733;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.button_ourmenu {
+  display: flex;
+  flex-direction: wrap;
+  color: #ffff;
+  font-family: montserrat;
+  gap:18px;
+  margin-bottom: 38px;
+}
+.search_box {
+  display: flex;
+  justify-content: right;
+}
+.search_text {
+  background: none;
+  border: 0;
+  background-color: #f4f9ff;
+}
+.all_ourmenu {
+  width: 98px;
+  height: 35px;
+  background-color: #ef4c00;
+  border-radius: 28px;
+  border: none;
+  font-size: 15px;
+  font-family: montserrat;
+  color: #ffffff;
+}
+.Menu_Icon {
+  background-color: #f4f9ff;
+  width: 21px;
+  margin-right: 25px;
+}
+.Filter_Icon {
+  width: 49px;
+}
+.filter_menu{
+  color: #2E4765;
+  border: none;
+  font-family: montserrat;
+  font-size: 18px;
+}
