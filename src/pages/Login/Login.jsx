@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Login.module.css';
-import appleicone from '../assets/icons/AppleIcon.svg';
-import googleicone from '../assets/icons/PlayStoreIcon.svg';
+import appleicone from '../../assets/icons/AppleIcon.svg';
+import googleicone from '../../assets/icons/PlayStoreIcon.svg';
 
 const Login = () => {
     return (

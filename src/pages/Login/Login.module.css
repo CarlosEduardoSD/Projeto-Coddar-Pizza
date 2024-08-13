@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url(../assets/images/sahand.png);
+    background-image: url(../../assets/images/sahand.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 527px;
