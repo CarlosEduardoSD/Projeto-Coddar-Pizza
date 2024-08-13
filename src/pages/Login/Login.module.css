@@ -29,6 +29,10 @@
     margin-top: 7px;
   }
 
+  .loginTituloTopo {
+    background-color: transparent;
+  }
+
   .loginTitulo h1 {
     color: #ef4c00;
     display: flex;
@@ -37,6 +41,7 @@
     margin-top: 12px;
     opacity: 1;
     font-family: montserrat;
+    background-color: transparent;
   }
 
   .loginTitulo h2 {
@@ -47,6 +52,7 @@
     text-transform: uppercase;
     margin-top: -10px;
     font-family: montserrat;
+    background-color: transparent;
   }
 
 .loginIcones {
@@ -71,6 +77,10 @@
   border: none;
 }
 
+.iconeApple {
+  background-color: transparent;
+}
+
 .textosApple  {
   background-color: transparent;
 }
@@ -79,6 +89,7 @@
   background-color: transparent;
   font-size: 11px;
   margin: 0;
+  font-family: Montserrat;
 }
 
 .textoApple2 {
@@ -86,6 +97,7 @@
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+  font-family: Montserrat;
 }
 
 .loginDownloadGoogle {
@@ -101,6 +113,10 @@
   border: none;
 }
 
+.iconeGoogle {
+  background-color: transparent;
+}
+
 .textosGoogle  {
   background-color: transparent;
 }
@@ -109,13 +125,16 @@
   background-color: transparent;
   font-size: 11px;
   margin: 0;
+  font-family: Montserrat;
+  text-align: start;
 }
 
 .textoGoogle2 {
   background-color: transparent;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   margin: 0;
+  font-family: Montserrat;  
 }
 
 .loginParte2 {
@@ -156,8 +175,10 @@
   margin-top: 100px;
 }
 
+
 .loginInputBox {
     margin-bottom: 19px;
+    padding: 18px;
 }
 
 .loginInputBox input {
