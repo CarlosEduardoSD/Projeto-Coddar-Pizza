@@ -15,18 +15,23 @@
     height: 812px;
     border: 1px solid #707070;
     border-radius: 20px;
+    background-color: #F5F5F5;
   }
 
   .loginTitulo {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url(../assets/images/sahand.png);
+    background-image: url(../../assets/images/sahand.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 527px;
     height: 792px;
     margin-top: 7px;
+  }
+
+  .loginTituloTopo {
+    background-color: transparent;
   }
 
   .loginTitulo h1 {
@@ -37,6 +42,7 @@
     margin-top: 12px;
     opacity: 1;
     font-family: montserrat;
+    background-color: transparent;
   }
 
   .loginTitulo h2 {
@@ -47,6 +53,7 @@
     text-transform: uppercase;
     margin-top: -10px;
     font-family: montserrat;
+    background-color: transparent;
   }
 
 .loginIcones {
@@ -71,6 +78,10 @@
   border: none;
 }
 
+.iconeApple {
+  background-color: transparent;
+}
+
 .textosApple  {
   background-color: transparent;
 }
@@ -79,6 +90,7 @@
   background-color: transparent;
   font-size: 11px;
   margin: 0;
+  font-family: Montserrat;
 }
 
 .textoApple2 {
@@ -86,6 +98,7 @@
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+  font-family: Montserrat;
 }
 
 .loginDownloadGoogle {
@@ -101,6 +114,10 @@
   border: none;
 }
 
+.iconeGoogle {
+  background-color: transparent;
+}
+
 .textosGoogle  {
   background-color: transparent;
 }
@@ -109,13 +126,16 @@
   background-color: transparent;
   font-size: 11px;
   margin: 0;
+  font-family: Montserrat;
+  text-align: start;
 }
 
 .textoGoogle2 {
   background-color: transparent;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   margin: 0;
+  font-family: Montserrat;  
 }
 
 .loginParte2 {
@@ -156,15 +176,22 @@
   margin-top: 100px;
 }
 
+
 .loginInputBox {
-    margin-bottom: 19px;
+    margin-bottom: 0px;
+    padding: 18px;    
+}
+
+.inputBoxPrincipal {
+  margin-bottom: 45px;
 }
 
 .loginInputBox input {
     border: 1px solid #707070;
     border-radius: 26px;
     width: 287px;
-    height: 39px;
+    height: 38px;
+    background-color: #F4F9FF;
 }
 
 .loginInputBox input::placeholder {
@@ -177,10 +204,20 @@
     bottom: 2px;
 }
 
+.senha {
+  margin-top: -55px;
+}
+
+.senha a {
+  margin-left: 130px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
 .botaoBox {
-    width: 273px;
-    height: 35px;
-    margin-top: 106px;
+    width: 286px;
+    height: 37px;
+    margin-top: 50px;
     background-color: #ef4c00;
     color: #ffffff;
     border-radius: 36px;
@@ -188,23 +225,22 @@
     font-size: 19px;
     text-align: center;
     font-family: Josefin Sans;
-}
-
-.senha a {
-  margin-left: 100px;
+    margin-left: 20px;
 }
 
 .conta a {
-  margin-top: 100px;
+  margin-top: 120px;
+  font-weight: 600;
 }
 
 .loginFooter {
     font-family: Josefin Sans;
     color: #000000;
     font-size: 14px;
+    font-weight: 600;
     opacity: 1;
     position: relative;
-    top: 100px;
+    top: 120px;
     left: 150px;
 }
 

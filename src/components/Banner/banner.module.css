@@ -38,10 +38,8 @@
 }
 
 .banner_apple_icon {
-  /* position: absolute; */
-  /* width: 22px;
-  height: 22px; */
   margin-top: 12px;
+  margin-left: 15px;
 }
 
 .banner_apple_download {
@@ -54,7 +52,7 @@
   border: none;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .banner_apple_download p {
@@ -92,7 +90,7 @@
   border: none;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .banner_playstore_download p {
@@ -100,7 +98,6 @@
 }
 
 .banner_playstore_icon {
-  /* width: 22px;
-  height: 22px; */
   margin-top: 12px;
+  margin-left: 13px;
 }

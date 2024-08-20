@@ -11,88 +11,88 @@ export default function Banner() {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className={styles.banner_title}>Pegue Uma Fatia</h1>
-            <div className={styles.banner_img}></div>
+            <div className={styles.banner_img}>
+              <h1 className={styles.banner_title}>Pegue Uma Fatia</h1>
+              <button className={styles.banner_apple_download}>
+                <img
+                  className={styles.banner_apple_icon}
+                  src={Apple}
+                  alt="Apple"
+                  style={{ backgroundColor: "transparent" }}
+                />
+
+                <div
+                  style={{
+                    display: "flex",
+                    backgroundColor: "transparent",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      fontSize: "10px",
+                      justifyContent: "space-between",
+                      margin: "0",
+                    }}
+                  >
+                    Download on the
+                  </p>
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      margin: "0",
+                    }}
+                  >
+                    App Store
+                  </p>
+                </div>
+              </button>
+              <button className={styles.banner_playstore_download}>
+                <img
+                  className={styles.banner_playstore_icon}
+                  src={PlayStore}
+                  alt="Play Store"
+                  style={{ backgroundColor: "transparent" }}
+                />
+
+                <div
+                  style={{
+                    display: "flex",
+                    backgroundColor: "transparent",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      fontSize: "10px",
+                      justifyContent: "space-between",
+                      margin: "0",
+                    }}
+                  >
+                    Download on the
+                  </p>
+                  <p
+                    style={{
+                      backgroundColor: "transparent",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      margin: "0",
+                    }}
+                  >
+                    Google Play
+                  </p>
+                </div>
+              </button>
+            </div>
           </div>
-          <button className={styles.banner_apple_download}>
-            <img
-              className={styles.banner_apple_icon}
-              src={Apple}
-              alt="Apple"
-              style={{ backgroundColor: "transparent" }}
-            />
-
-            <div
-              style={{
-                display: "flex",
-                backgroundColor: "transparent",
-                justifyContent: "space-between",
-              }}
-            >
-              <p
-                style={{
-                  backgroundColor: "transparent",
-                  fontSize: "10px",
-                  justifyContent: "space-between",
-                  position: "relative",
-                  marginTop: "8px",
-                }}
-              >
-                Download on the
-              </p>
-              <p
-                style={{
-                  backgroundColor: "transparent",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  marginTop: "21px",
-                  position: "absolute",
-                  marginRight: "12px",
-                }}
-              >
-                App Store
-              </p>
-            </div>
-          </button>
-          <button className={styles.banner_playstore_download}>
-            <img
-              className={styles.banner_playstore_icon}
-              src={PlayStore}
-              alt="Play Store"
-              style={{ backgroundColor: "transparent" }}
-            />
-
-            <div
-              style={{
-                display: "flex",
-                backgroundColor: "transparent",
-                justifyContent: "space-between",
-              }}
-            >
-              <p
-                style={{
-                  backgroundColor: "transparent",
-                  fontSize: "10px",
-                  justifyContent: "space-between",
-                  position: "relative",
-                  marginTop: "8px",
-                }}
-              >
-                Download on the
-              </p>
-              <p
-                style={{
-                  backgroundColor: "transparent",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  marginTop: "21px",
-                  position: "absolute",
-                }}
-              >
-                Google Play
-              </p>
-            </div>
-          </button>
         </div>
       </div>
     </>

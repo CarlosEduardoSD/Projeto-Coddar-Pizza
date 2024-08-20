@@ -1,0 +1,54 @@
+.bannerpizza_img {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../../assets/img/bannerpizza2.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 369px;
+  border-radius: 35px;
+  margin-top: 26px;
+  padding-right: 23px;
+}
+
+.banner_title {
+  position: absolute;
+  background: transparent;
+  color: #b30733;
+  font-size: 38px;
+  font-weight: 400;
+  margin-top: 119px;
+  margin-right: 186px;
+}
+
+.banner_text {
+  position: absolute;
+  background: transparent;
+  color: #b30733;
+  font-size: 25px;
+  font-weight: 400;
+  opacity: 1;
+  text-align: right;
+  margin-top: 166px;
+  margin-right: 23px;
+}
+
+.banner_description {
+  position: absolute;
+  background: transparent;
+  color: #ff4a40;
+  font-size: 20px;
+  opacity: 1;
+  margin-top: 251px;
+  margin-right: 44px;
+}
+
+.banner_description_type {
+  background: transparent;
+  color: #ff4a40;
+  font-size: 20px;
+  opacity: 1;
+  margin-top: 326px;
+  display: flex;
+  justify-content: space-between;
+}
