@@ -4,17 +4,13 @@ import OurMenu from "../../components/Menu/OurMenu";
 
 import Banner from "../../components/Banner/banner";
 
-
 export default function Home() {
   return (
     <>
-    <Header />
+      <Header />
 
-    
-
-    <Banner />
+      <Banner />
+      <OurMenu />
     </>
-
-  )
+  );
 }
-

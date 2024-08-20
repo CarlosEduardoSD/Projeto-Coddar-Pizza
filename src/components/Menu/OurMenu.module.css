@@ -7,13 +7,12 @@
   width: 100vw;
   height: 100vb;
   display: flex;
-  align-items: center;
   justify-content: center;
-  
 
 }
 .ourmenu {
-  width: 1063px;
+  margin-top: 32px;
+  width: 1265px;
   background-color: #F5F5F5;
 }
 .menu_ourmenu h2 {
