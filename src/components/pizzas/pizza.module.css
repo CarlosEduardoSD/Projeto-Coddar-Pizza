@@ -14,7 +14,7 @@
   text-decoration: none;
   border: 1px solid #2e476533;
   border-radius: 0px 0px 20px 20px;
-  width: 327px;
+  width: 410px;
   padding: 0;
   color: #b30733;
 }
@@ -22,7 +22,7 @@
 .pizza_img {
   display: block;
   /* background-image: url("../../assets/img/sabor_casa.png"); */
-  width: 327px;
+  width: 410px;
   height: 154px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
