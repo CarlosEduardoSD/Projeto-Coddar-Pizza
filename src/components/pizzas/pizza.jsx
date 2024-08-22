@@ -11,16 +11,16 @@ import PizzaButton from "./pizzaButton";
 
 export default function Pizza() {
   const items = [
-    { name: "Sabor da Casa", img: saborDaCasaImg },
-    { name: "Calabresa", img: calabresaImg },
-    { name: "Doce", img: doceImg },
-    { name: "Pepperoni", img: pepperoniImg },
-    { name: "Marguerita", img: margueritaImg },
+    { name: "Pizza sabor da casa", img: saborDaCasaImg },
+    { name: "Pizza calabresa", img: calabresaImg },
+    { name: "Pizza doce", img: doceImg },
+    { name: "Pizza pepperoni", img: pepperoniImg },
+    { name: "Pizza marguerita", img: margueritaImg },
   ];
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           <div className="col-md-12">
             <div className={styles.cardapio_title}>
@@ -30,6 +30,23 @@ export default function Pizza() {
           <div className={styles.pizza_container}>
             {items.map((item, index) => (
               <PizzaButton key={index} item={item} />
+            ))}
+          </div>
+        </div>
+      </div> */}
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className={styles.cardapio_title}>
+              <h4>Nosso Cardápio</h4>
+            </div>
+          </div>
+          <div className={styles.pizza_container}>
+            {items.map((item, index) => (
+              <div className={styles.cardapio_wrapper} key={index}>
+                <PizzaButton item={item} />
+              </div>
             ))}
           </div>
         </div>

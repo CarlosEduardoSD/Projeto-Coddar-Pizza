@@ -8,8 +8,8 @@ export default function Home() {
     <>
     <Header />
     <Banner />
-    <Pizza />
     {/* <BannerPizzaria /> */}
+    <Pizza />
     </>
   )
 }
