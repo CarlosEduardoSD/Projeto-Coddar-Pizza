@@ -8,13 +8,13 @@
   height: 100vb;
   display: flex;
   justify-content: center;
-
 }
 .ourmenu {
   margin-top: 32px;
-  width: 1265px;
-  background-color: #F5F5F5;
+  width: 1290px;
+  background-color: #f5f5f5;
 }
+
 .menu_ourmenu h2 {
   font-family: montserrat;
   color: #b30733;
@@ -27,19 +27,43 @@
   flex-direction: wrap;
   color: #ffff;
   font-family: montserrat;
-  gap:18px;
+  gap: 18px;
   margin-bottom: 38px;
 }
+
+.button_ourmenu button:hover{
+  background-color: #EF4C00;
+  border-radius: 28px;
+  width: 144px;
+  height: 35px;
+  color: #FFFFFF;
+}
+
 .search_box {
   display: flex;
   justify-content: right;
+  width: 99%;
+  align-items: center;
+  gap: 8px;
 }
+
 .search_text {
-  background: none;
-  border: 0;
-  background-color: #f4f9ff;
+  background-color:transparent;
+  border-radius: 26px;
+  border: none;
+  background-color: none;
+  padding: 15px;
+  width: 350px;
+  font-family: montserrat;
+ 
 }
-.all_ourmenu {
+.search_text::placeholder {
+  font-family: montserrat;
+  font-size: 18px;
+  color: #2e4765;
+  
+}
+/*.all_ourmenu {
   width: 98px;
   height: 35px;
   background-color: #ef4c00;
@@ -48,18 +72,32 @@
   font-size: 15px;
   font-family: montserrat;
   color: #ffffff;
-}
+}*/
 .Menu_Icon {
-  background-color: #f4f9ff;
-  width: 21px;
-  margin-right: 25px;
+  background-color:transparent;
+  width: 23px;
+  margin-right: 16px;
+  opacity: 1;
+
 }
 .Filter_Icon {
   width: 49px;
 }
-.filter_menu{
-  color: #2E4765;
+.filter_menu {
+  color: #2e4765;
   border: none;
   font-family: montserrat;
   font-size: 18px;
+  width: 144px;
+  height: 35px;
+  background-color: #F4F9FF;
+}
+
+.div_search{
+  background-color: #F4F9FF;
+  width: 370px;
+  height: 50px;
+  border-radius: 26px;
+  display: flex;
+ 
 }
