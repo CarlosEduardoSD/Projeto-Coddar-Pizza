@@ -147,14 +147,12 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .header_responsive {
-    /* gap: 20px; */
-  }
-}
+/* @media screen and (max-width: 768px) {
 
-@media screen and (max-width: 375px) {
-  .header_responsive {
-    /* gap: 20px; */
+} */
+
+@media screen and (max-width: 425px) {
+  .pizza_img img {
+    width: 50px;
   }
 }
