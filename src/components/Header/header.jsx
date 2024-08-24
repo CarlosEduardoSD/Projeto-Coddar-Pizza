@@ -22,51 +22,55 @@ export default function Header() {
             style={{ display: "flex", justifyContent: "space-evenly" }}
             // style={{ display: "flex", justifyContent: "space-between" }}
           >
-            <ul className={styles.header_menu_list}>
-              <li>
-                <a href="#search">Buscar</a>
-              </li>
-              <li>
-                <a href="#about">Sobre</a>
-              </li>
-              <li>
-                <a href="#function">Como Funciona</a>
-              </li>
-              <li>
-                <a href="#plans">Planos</a>
-              </li>
-              <li>
-                <a href="#contact">Contato</a>
-              </li>
-            </ul>
-            <div className={styles.home_img}>
-              <img className="img" src={Perfil} alt="Foto Perfil" />
-              {/* img classname="img-fluid" */}
-            </div>
-            <div
-              style={{
-                width: "1px",
-                backgroundColor: "#2E4765",
-                opacity: "0.2",
-              }}
-            ></div>
-            <div className={styles.button}>
-              <a href="#cart" className={styles.button_cart}>
-                <FaCartArrowDown
-                  style={{
-                    color: "#ffffff",
-                    backgroundColor: "transparent",
-                    width: "23px",
-                    height: "20px",
-                  }}
-                />
-                <p>(5) Item</p>
-              </a>
+            <div className={styles.header_responsive}>
+              <ul className={styles.header_menu_list}>
+                <li>
+                  <a href="#search">Buscar</a>
+                </li>
+                <li>
+                  <a href="#about">Sobre</a>
+                </li>
+                <li>
+                  <a href="#function">Como Funciona</a>
+                </li>
+                <li>
+                  <a href="#plans">Planos</a>
+                </li>
+                <li>
+                  <a href="#contact">Contato</a>
+                </li>
+              </ul>
+              <div className={styles.home_img}>
+                <img className="img" src={Perfil} alt="Foto Perfil" />
+                {/* img classname="img-fluid" */}
+              </div>
+              <div
+                className={styles.divider_vertical}
+                style={{
+                  width: "1px",
+                  backgroundColor: "#2E4765",
+                  opacity: "0.2",
+                }}
+              ></div>
+              <div className={styles.button}>
+                <a href="#cart" className={styles.button_cart}>
+                  <FaCartArrowDown
+                    style={{
+                      color: "#ffffff",
+                      backgroundColor: "transparent",
+                      width: "23px",
+                      height: "20px",
+                    }}
+                  />
+                  <p>(5) Item</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div
+        className={styles.divider_horizontal}
         style={{
           height: "1px",
           backgroundColor: "#2E4765",

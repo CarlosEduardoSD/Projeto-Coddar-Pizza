@@ -12,7 +12,7 @@
   color: #ef4c00;
   text-transform: uppercase;
   opacity: 1;
-  font-size: 28px;
+  font-size: 25px;
   margin: 0;
 }
 
@@ -23,7 +23,16 @@
   align-items: center;
   left: 45px;
   margin: 0;
-  /* margin-right: 110vh; */
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.header_responsive {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  align-items: center;
+  margin: 0;
 }
 
 .button {
@@ -75,10 +84,77 @@
   border-radius: 28px;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0 15px;
 }
 
 .button_cart p {
   background: transparent;
   color: white;
   margin: 0;
+}
+
+@media screen and (max-width: 1350px) {
+  .header_responsive {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1206px) {
+  .header_menu_list {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1105px) {
+  .divider_vertical {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1082px) {
+  .header_menu_list {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .button_cart p {
+    display: none;
+  }
+
+  .button_cart {
+    width: auto;
+    padding: 10px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .header_menu_list {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .header_menu_list {
+    display: none;
+  }
+  .header_responsive {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header_responsive {
+    /* gap: 20px; */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header_responsive {
+    /* gap: 20px; */
+  }
 }
