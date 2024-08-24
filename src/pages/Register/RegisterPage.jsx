@@ -1,16 +1,15 @@
-import "./RegisterPage.css";
-// import AppleIcon from "./../../assets/icons/icons-apple.png";
-// import GooglePlayIcon from "./../../assets/icons/icons-google-play.png";
+import styles from "./RegisterPage.module.css";
+
 import AppleIcon from "../../assets/icons/AppleIcon.svg";
 import GooglePlayIcon from "../../assets/icons/PlayStoreIcon.svg";
 function RegisterPage() {
   return (
-    <div className="body-register">
-      <div className="register">
+    <div className={styles.body_register}>
+      <div className={styles.register}>
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <div className="register-first-part">
+              <div className={styles.register_first_part}>
                 <div
                   style={{
                     backgroundColor: "transparent",
@@ -31,8 +30,8 @@ function RegisterPage() {
                     Pegue uma fatia
                   </h2>
                 </div>
-                <div className="register-icons">
-                  <button className="register-download-Apple">
+                <div className={styles.register_icons}>
+                  <button className={styles.register_download_Apple}>
                     <img
                       src={AppleIcon}
                       style={{ backgroundColor: "transparent" }}
@@ -41,6 +40,7 @@ function RegisterPage() {
                       <p
                         style={{
                           backgroundColor: "transparent",
+                          
                           fontSize: "11px",
                           margin: "0",
                         }}
@@ -58,15 +58,9 @@ function RegisterPage() {
                         App Store
                       </p>
                     </div>
-                    {/* <div className="register-Apple">
-                      <div className="register-download">
-                        <p className="download-on-the">Download on the </p>
-                        <p className="AppStore"> App Store</p>
-                      </div>
-                    </div> */}
                   </button>
 
-                  <button className="register-download-Google">
+                  <button className={styles.register_download_Google}>
                     <img
                       src={GooglePlayIcon}
                       style={{ backgroundColor: "transparent" }}
@@ -110,12 +104,12 @@ function RegisterPage() {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="register-second-part">
+              <div className={styles.register_second_part}>
                 <h2>CADASTRAR-SE</h2>
                 <hr></hr>
-                <span className="regular"></span>
+                <span className={styles.regular}></span>
                 <form>
-                  <div className="register-input-box">
+                  <div className={styles.register_input_box}>
                     <input
                       type="text"
                       name="nome"
@@ -124,7 +118,7 @@ function RegisterPage() {
                       required
                     ></input>
                   </div>
-                  <div className="register-input-box">
+                  <div className={styles.register_input_box}>
                     <input
                       type="email"
                       name="e-mail"
@@ -133,14 +127,14 @@ function RegisterPage() {
                     ></input>
                   </div>
 
-                  <div className="register-input-box">
+                  <div className={styles.register_input_box}>
                     <input
                       type="password"
                       name="password"
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <div className="register-input-box">
+                  <div className={styles.register_input_box}>
                     <input
                       type="password"
                       name="password"
@@ -149,9 +143,9 @@ function RegisterPage() {
                   </div>
                 </form>
 
-                <button className="register-button">Registrar-se</button>
+                <button className={styles.register_button}>Registrar-se</button>
 
-                <div className="register-footer">
+                <div className={styles.register_footer}>
                   <p>Codar Pizzaria 2020</p>
                 </div>
               </div>

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .pageLogin {
+    width: 1068px;
+    height: 812px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+  }
+
+  .loginTitulo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../../assets/images/sahand.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 527px;
+    height: 792px;
+    margin-top: 7px;
+  }
+
+  .loginTituloTopo {
+    background-color: transparent;
+  }
+
+  .loginTitulo h1 {
+    color: #ef4c00;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    margin-top: 12px;
+    opacity: 1;
+    font-family: montserrat;
+    background-color: transparent;
+  }
+
+  .loginTitulo h2 {
+    color: #ff5100;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: -10px;
+    font-family: montserrat;
+    background-color: transparent;
+  }
+
+.loginIcones {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 13px;
+  font-family: Montserrat;
+  background-color: transparent;
+  margin-bottom: 28px;
+}
+
+.loginDownloadApple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #B30733;
+  width: 140px;
+  height: 49px;
+  border-radius: 5px;
+  border: none;
+}
+
+.iconeApple {
+  background-color: transparent;
+}
+
+.textosApple  {
+  background-color: transparent;
+}
+
+.textoApple1 {
+  background-color: transparent;
+  font-size: 11px;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.textoApple2 {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.loginDownloadGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ff0043;
+  width: 140px;
+  height: 49px;
+  opacity: 1;
+  border-radius: 5px;
+  border: none;
+}
+
+.iconeGoogle {
+  background-color: transparent;
+}
+
+.textosGoogle  {
+  background-color: transparent;
+}
+
+.textoGoogle1 {
+  background-color: transparent;
+  font-size: 11px;
+  margin: 0;
+  font-family: Montserrat;
+  text-align: start;
+}
+
+.textoGoogle2 {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  font-family: Montserrat;  
+}
+
+.loginParte2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginParte2 h2 {
+    font-weight: 600;
+    font-size: 17px;
+    color: #b30733;
+    font-family: roboto;
+    opacity: 1;
+    margin: 56px 0 9px 0;
+    text-transform: uppercase;
+}
+
+.loginParte2 hr {
+    width: 51px;
+    color: #ef4c00;
+    text-align: center;
+    border: 1px solid #ef4c00;
+    border-radius: 3px ;
+    opacity: 1;
+    margin: 0;
+}
+
+.loginLinha {
+    width: 456px;
+    border: 1px solid #2e4765;
+    opacity: 0.2;
+    margin: 21.6px 0 31.99px;
+}
+
+.formularioBox {
+  margin-top: 100px;
+}
+
+
+.loginInputBox {
+    margin-bottom: 0px;
+    padding: 18px;    
+}
+
+.inputBoxPrincipal {
+  margin-bottom: 45px;
+}
+
+.loginInputBox input {
+    border: 1px solid #707070;
+    border-radius: 26px;
+    width: 287px;
+    height: 38px;
+    background-color: #F4F9FF;
+}
+
+.loginInputBox input::placeholder {
+    color: #2e4765;
+    font-size: 12px;
+    font-family: Roboto;
+    opacity: 0.75;
+    position: relative;
+    left: 23px;
+    bottom: 2px;
+}
+
+.senha {
+  margin-top: -55px;
+}
+
+.senha a {
+  margin-left: 130px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.botaoBox {
+    width: 286px;
+    height: 37px;
+    margin-top: 50px;
+    background-color: #ef4c00;
+    color: #ffffff;
+    border-radius: 36px;
+    border: none;
+    font-size: 19px;
+    text-align: center;
+    font-family: Josefin Sans;
+    margin-left: 20px;
+}
+
+.conta a {
+  margin-top: 120px;
+  font-weight: 600;
+}
+
+.loginFooter {
+    font-family: Josefin Sans;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 1;
+    position: relative;
+    top: 120px;
+    left: 150px;
+}
+
+.senha, .conta {
+    display: flex;
+    justify-content: center;
+}
+
+.senha a, .conta a {
+    text-decoration: none;
+    color: black;
+}

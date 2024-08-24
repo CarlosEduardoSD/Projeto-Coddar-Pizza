@@ -1,4 +1,7 @@
 import Header from "../../components/Header/header";
+
+import OurMenu from "../../components/Menu/OurMenu";
+
 import Banner from "../../components/Banner/banner";
 import Pizza from "../../components/pizzas/pizza";
 // import BannerPizzaria from "../../components/BannerPizzaria/BannerPizzaria";
@@ -6,10 +9,11 @@ import Pizza from "../../components/pizzas/pizza";
 export default function Home() {
   return (
     <>
-    <Header />
-    <Banner />
-    {/* <BannerPizzaria /> */}
-    <Pizza />
+      <Header />
+      <Banner />
+      <OurMenu />
+      <Pizza />
+      {/* <BannerPizzaria /> */}
     </>
-  )
+  );
 }
