@@ -1,6 +1,6 @@
 import Header from "../../components/Header/header";
 
-import OurMenu from "../../components/Menu/OurMenu";
+// import OurMenu from "../../components/Menu/OurMenu";
 
 import Banner from "../../components/Banner/banner";
 import Pizza from "../../components/pizzas/pizza";
@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <Banner />
-      <OurMenu />
+      {/* <OurMenu /> */}
       <Pizza />
       {/* <BannerPizzaria /> */}
     </>

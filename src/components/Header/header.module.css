@@ -93,6 +93,10 @@
   margin: 0;
 }
 
+.header_sidebar {
+  display: none;
+}
+
 @media screen and (max-width: 1350px) {
   .header_responsive {
     gap: 20px;
@@ -147,12 +151,40 @@
   }
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .header_responsive {
+    display: none;
+  }
 
-} */
+  .header_sidebar {
+    display: flex;
+    justify-content: flex-start;
+    /* position: relative; */
+    right: 21rem;
+    margin-top: 10px;
+  }
+
+  .header_sidebar button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header_menu_responsive li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .header_menu_responsive {
+    list-style: none;
+  }
+}
 
 @media screen and (max-width: 425px) {
   .pizza_img img {
     width: 50px;
+  }
+
+  .header_sidebar {
+    right: 11rem;
   }
 }
