@@ -9,11 +9,13 @@ import Pizza from "../../components/pizzas/pizza";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Banner />
-      <OurMenu />
-      <Pizza />
+
+    <Header />
+    <Banner />
+    <OurMenu />
+    <Pizza />
     {/* <BannerPizzaria /> */}
+    <Pizza />
     </>
   );
 }

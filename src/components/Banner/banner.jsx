@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Banner/banner.module.css";
 
 import Apple from "../../assets/img/Apple.svg";
 import PlayStore from "../../assets/img/PlayStore.svg";
 // import Pizza from "../../assets/img/pizza.png";
+import BannerButtonErivax from "../Banner/BannerButtonErivax";
 
 export default function Banner() {
   return (
