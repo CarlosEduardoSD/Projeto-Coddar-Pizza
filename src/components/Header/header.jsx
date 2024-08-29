@@ -10,103 +10,81 @@ import { FaCartArrowDown } from "react-icons/fa6";
 export default function Header() {
   return (
     <>
-      <div className="container-fluid">
-        <div className="row" style={{ marginTop: "20px" }}>
-          <div
-            className="col-md-4"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <h1 class={styles.header_title} href="#">
+            Codar Pizzaria
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style={{ backgroundColor: "#ef4c00", marginTop: "10px" }}
           >
-            <h1 className={styles.header_title}>CODAR PIZZARIA</h1>
-          </div>
+            <span
+              class="navbar-toggler-icon"
+              style={{ backgroundColor: "#ef4c00" }}
+            ></span>
+          </button>
           <div
-            className="col-md-8"
-            style={{ display: "flex", justifyContent: "flex-start" }}
-            // style={{ display: "flex", justifyContent: "space-between" }}
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            style={{ marginTop: "12px", marginLeft: "25vh" }}
           >
-            <div className={styles.header_sidebar}>
-              <button
-                class="btn"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptions"
-                aria-controls="offcanvasWithBothOptions"
-                style={{ backgroundColor: "#ef4c00", color: "white" }}
-              >
-                <img
-                  className="img-fluid"
-                  src={Hamburger}
-                  alt="Menu"
-                  style={{ backgroundColor: "transparent" }}
-                />
-              </button>
-              <div
-                class="offcanvas offcanvas-start"
-                data-bs-scroll="true"
-                tabindex="-1"
-                id="offcanvasWithBothOptions"
-                aria-labelledby="offcanvasWithBothOptionsLabel"
-                style={{ width: "50%" }}
-              >
-                <div class="offcanvas-header">
-                  <h5
-                    class="offcanvas-title"
-                    id="offcanvasWithBothOptionsLabel"
-                  >
-                    Menu
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul className={styles.header_menu_responsive}>
-                    <li>
-                      <a href="#search">Buscar</a>
-                    </li>
-                    <li>
-                      <a href="#about">Sobre</a>
-                    </li>
-                    <li>
-                      <a href="#function">Como Funciona</a>
-                    </li>
-                    <li>
-                      <a href="#plans">Planos</a>
-                    </li>
-                    <li>
-                      <a href="#contact">Contato</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className={styles.header_responsive}>
-              <ul className={styles.header_menu_list}>
-                <li>
-                  <a href="#search">Buscar</a>
-                </li>
-                <li>
-                  <a href="#about">Sobre</a>
-                </li>
-                <li>
-                  <a href="#function">Como Funciona</a>
-                </li>
-                <li>
-                  <a href="#plans">Planos</a>
-                </li>
-                <li>
-                  <a href="#contact">Contato</a>
-                </li>
-              </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Perfil
+                  <img
+                  className={styles.sidebar_img}
+                    src={Perfil}
+                    alt="Foto"
+                    style={{
+                      borderRadius: "50%",
+                      width: "56px",
+                      height: "53px",
+                    }}
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Buscar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Sobre
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Como Funciona
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Planos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Contato
+                </a>
+              </li>
+              <li class="nav-item">
+                <a className={styles.menu_link} aria-current="page" href="#">
+                  Carrinho
+                </a>
+              </li>
+            </ul>
+            <div className={styles.button_area} id="#navbarNav">
               <div className={styles.home_img}>
                 <img className="img" src={Perfil} alt="Foto Perfil" />
-                {/* img classname="img-fluid" */}
               </div>
               <div
                 className={styles.divider_vertical}
@@ -114,6 +92,8 @@ export default function Header() {
                   width: "1px",
                   backgroundColor: "#2E4765",
                   opacity: "0.2",
+                  height: "50px",
+                  margin: "0 15px",
                 }}
               ></div>
               <div className={styles.button}>
@@ -132,7 +112,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
       <div
         className={styles.divider_horizontal}
         style={{
