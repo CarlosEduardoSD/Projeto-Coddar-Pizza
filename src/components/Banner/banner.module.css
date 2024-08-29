@@ -81,6 +81,7 @@
   margin-left: 13px;
 }
 
+
 /*Começo do responsivo - 1024px*/
 
 @media (max-width: 1024px) {
@@ -192,3 +193,4 @@
     margin-left: 75px;
   }
 }
+
