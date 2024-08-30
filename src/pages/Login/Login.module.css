@@ -253,3 +253,142 @@
     text-decoration: none;
     color: black;
 }
+
+/*Começo do responsivo - 1024px*/
+
+@media (max-width: 1024px) {
+  .bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .pageLogin{
+    width: 1000px;
+    height: 812px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  .loginTitulo {
+    width: 100%;
+  }
+  .loginTitulo h1 {
+    font-size: 33px;
+    margin-left: -90px;
+  }
+  .loginTitulo h2 {
+    font-size: 21px;
+    margin-left: -90px;
+  }
+  .loginIcones{
+    margin-left: -70px;
+  }
+}
+
+/*configuração do 768px*/
+
+@media (max-width: 768px) {
+  .pageLogin {
+    width: 750px;
+  }
+  .loginTitulo{
+    width: 450px;
+    height: 792px;
+    margin-left: -20px;
+  }
+  .loginTitulo h1 {
+    font-size: 26px;
+    margin-left: -100px;
+  }
+  .loginTitulo h2 {
+    font-size: 18px;
+    margin-left: -100px;
+  }
+  .loginIcones{
+    margin-left: -89px;
+  }
+
+  .loginLinha {
+    width: 340px;
+  }
+  .loginFooter {
+    left: 100px;
+  }
+}
+
+/*responsivo 425px*/
+
+@media (max-width: 425px) {
+  .bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageLogin{
+    width: 100%;
+    border: 1px solid #707070;
+    background-color: #F5F5F5;
+  }
+  .loginTitulo {
+    display: none;
+  }
+  .loginTitulo h2 {
+    font-size: 21px;
+    margin-left: -90px;
+  }
+}
+
+/*Responsivo 375px*/
+
+@media (max-width: 375px) {
+  .bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageLogin{
+    width: 100%;
+    border: 1px solid #707070;
+    background-color: #F5F5F5;
+  }
+  .loginTitulo {
+    display: none;
+  }
+  .loginTitulo h2 {
+    font-size: 21px;
+    margin-left: -90px;
+  }
+}
+
+/*Responsivo 320px*/
+
+@media (max-width: 320px) {
+  .bodyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageLogin{
+    width: 100%;
+    border: 1px solid #707070;
+    background-color: #F5F5F5;
+  }
+  .loginTitulo {
+    display: none;
+  }
+  .loginTitulo h2 {
+    font-size: 21px;
+    margin-left: -90px;
+  }
+  .loginFooter {
+    font-family: Josefin Sans;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 1;
+    position: relative;
+    top: 120px;
+    left: 50px;
+}
+}
