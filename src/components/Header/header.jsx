@@ -40,13 +40,13 @@ export default function Header() {
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Perfil
                   <img
-                  className={styles.sidebar_img}
+                    className={styles.sidebar_img}
                     src={Perfil}
                     alt="Foto"
                     style={{
                       borderRadius: "50%",
-                      width: "56px",
-                      height: "53px",
+                      width: "25px",
+                      height: "25px",
                     }}
                   />
                 </a>
