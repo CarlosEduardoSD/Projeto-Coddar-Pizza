@@ -61,3 +61,63 @@
   display: flex;
   gap: 20px;
 }
+
+/*Começo do responsivo - 1024px*/
+
+@media (max-width: 1024px) {
+  .banner_text {
+    font-size: 18px;
+  }
+}
+
+/*configuração do 768px*/
+
+@media (max-width: 768px) {
+  .banner_title {
+    font-size: 28px;
+  }
+  .banner_text {
+    display: none;
+  }
+  .banner_description {
+    width: 250px;
+    word-wrap: break-word;
+  }
+}
+
+/*responsivo 425px*/
+
+@media (max-width: 425px) {
+  .banner_title, .banner_text, .banner_description {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+
+/*Responsivo 375px*/
+
+@media (max-width: 375px) {
+  .banner_title, .banner_text, .banner_description {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+/*Responsivo 320px*/
+
+@media (max-width: 320px) {
+  .banner_title, .banner_text {
+    background: #f1f1f1;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .banner_description{
+    padding: 1px;
+    margin: 10px -15px;
+  }
+}
+
+
