@@ -59,27 +59,6 @@
   color: #ffffff;
 }
 
-/* .banner_apple p {
-  position: absolute;
-  background: transparent;
-  color: #f5f5f5;
-} */
-
-/* .banner_gplay {
-  position: absolute;
-  width: 150px;
-  height: 51px;
-  background-color: #b30733;
-  margin-top: 224px;
-  margin-left: 188px;
-} */
-
-/* .banner_gplay p {
-  position: absolute;
-  background: transparent;
-  color: #f5f5f5;
-} */
-
 .banner_playstore_download {
   position: absolute;
   width: 150px;
@@ -102,10 +81,114 @@
   margin-left: 13px;
 }
 
-/* .button_container {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  gap: 20px;
-} */
+/*Começo do responsivo - 1024px*/
+
+@media (max-width: 1024px) {
+  .banner_img {
+    width: 800px;
+  }
+  .banner_title {
+    width: 335px;
+    height: 43px;
+    margin-top: 150px;
+    margin-left: 21px;
+  }
+  .banner_apple_download {
+    margin-top: 300px;
+    margin-left: 220px;
+  }
+  .banner_playstore_download {
+    margin-top: 300px;
+    margin-left: 420px;
+  }
+}
+
+/*configuração do 768px*/
+
+@media (max-width: 768px) {
+  .banner_img {
+    width: 590px;
+    height: 369px;
+  }
+  .banner_title {
+    margin-top: 150px;
+    margin-left: 21px;
+  }
+  .banner_apple_download {
+    margin-top: 300px;
+    margin-left: 130px;
+  }
+  .banner_playstore_download {
+    margin-top: 300px;
+    margin-left: 300px;
+  }
+}
+
+/*responsivo 425px*/
+
+@media (max-width: 425px) {
+  .banner_img {
+    width: 330px;
+    height: 369px;
+  }
+  .banner_title {
+    margin-top: 120px;
+    margin-left: 30px;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .banner_apple_download {
+    margin-top: 230px;
+    margin-left: 100px;
+  }
+  .banner_playstore_download {
+    margin-top: 300px;
+    margin-left: 100px;
+  }
+}
+
+/*Responsivo 375px*/
+
+@media (max-width: 375px) {
+  .banner_img {
+    width: 300px;
+    height: 369px;
+  }
+  .banner_title {
+    margin-top: 130px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .banner_apple_download {
+    margin-top: 230px;
+    margin-left: 75px;
+  }
+  .banner_playstore_download {
+    margin-top: 300px;
+    margin-left: 75px;
+  }
+}
+
+/*Responsivo 320px*/
+
+@media (max-width: 320px) {
+  .banner_img {
+    width: 300px;
+    height: 369px;
+  }
+  .banner_title {
+    margin-top: 130px;
+    margin-left: 35px;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .banner_apple_download {
+    margin-top: 220px;
+    margin-left: 75px;
+  }
+  .banner_playstore_download {
+    margin-top: 300px;
+    margin-left: 75px;
+  }
+}
