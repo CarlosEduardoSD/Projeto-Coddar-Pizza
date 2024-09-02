@@ -85,7 +85,7 @@
 
 .menu_link {
   color: black;
-  padding: 8px;
+  padding: 8px 8px 38px 8px;
   border-radius: 0;
   text-decoration: none;
   font-size: 15px;
@@ -161,6 +161,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     font-size: 15px;
+    padding: 8px;
   }
 
   .menu_link:hover {

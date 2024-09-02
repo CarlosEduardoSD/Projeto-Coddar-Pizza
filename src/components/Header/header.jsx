@@ -10,13 +10,13 @@ import { FaCartArrowDown } from "react-icons/fa6";
 export default function Header() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <h1 class={styles.header_title} href="#">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container">
+          <h1 className={styles.header_title} href="#">
             Codar Pizzaria
           </h1>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -26,17 +26,17 @@ export default function Header() {
             style={{ backgroundColor: "#ef4c00", marginTop: "10px" }}
           >
             <span
-              class="navbar-toggler-icon"
+              className="navbar-toggler-icon"
               style={{ backgroundColor: "#ef4c00" }}
             ></span>
           </button>
           <div
-            class="collapse navbar-collapse"
+            className="collapse navbar-collapse"
             id="navbarSupportedContent"
             style={{ marginTop: "12px", marginLeft: "25vh" }}
           >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Perfil
                   <img
@@ -51,32 +51,32 @@ export default function Header() {
                   />
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Buscar
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Sobre
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Como Funciona
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Planos
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Contato
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a className={styles.menu_link} aria-current="page" href="#">
                   Carrinho
                 </a>
