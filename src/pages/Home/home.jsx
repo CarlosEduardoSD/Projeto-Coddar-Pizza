@@ -7,8 +7,8 @@ export default function Home() {
     <>
 
 
-    <Header />
-    <Banner />
+    {/*<Header />*/}
+    {/*<Banner />*/}
     <OurMenu />
 
     </>
