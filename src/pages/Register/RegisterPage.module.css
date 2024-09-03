@@ -6,13 +6,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
 }
 .register {
-  width: 1068px;
-  height: 812px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*width: 1068px;
+  height: 812px;*/
   border: 1px solid #707070;
-  border-radius: 20px;
+ 
 }
 
 .register_first_part {
@@ -20,7 +24,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* position: relative; */
+  align-items: center;
+  position: relative; 
   background-image: url("./../../assets/images/image_registerpage.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,6 +33,7 @@
   width: 527px;
   height: 792px;
   margin-top: 7px;
+  
 }
 
 .register_first_part h1 {
