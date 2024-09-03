@@ -111,16 +111,6 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .menu_link {
-    font-size: 11px;
-  }
-
-  .header_title {
-    font-size: 16px;
-  }
-}
-
 @media screen and (max-width: 1082px) {
   .header_menu_list {
     gap: 20px;
@@ -208,6 +198,10 @@
 
 @media screen and (min-width: 992px) {
   .sidebar_img {
+    display: none;
+  }
+
+  .cart {
     display: none;
   }
 }

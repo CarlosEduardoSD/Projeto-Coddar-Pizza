@@ -37,7 +37,7 @@ export default function Header() {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={styles.menu_link} aria-current="page" href="#">
+                <a className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
                   Perfil
                   <img
                     className={styles.sidebar_img}
@@ -77,7 +77,7 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className={styles.menu_link} aria-current="page" href="#">
+                <a  className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
                   Carrinho
                 </a>
               </li>
