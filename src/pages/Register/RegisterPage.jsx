@@ -8,7 +8,7 @@ function RegisterPage() {
       <div className={styles.register}>
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6" >
               <div className={styles.register_first_part}>
                 <div
                   style={{
