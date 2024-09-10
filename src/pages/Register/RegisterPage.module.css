@@ -6,9 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 100vh;
 }
+  
 .register {
   width: 1068px;
   height: 830px;
@@ -16,7 +15,6 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #707070;
-  border-radius: 20px;
 }
 
 .register_first_part {
