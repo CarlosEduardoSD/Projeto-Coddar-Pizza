@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .titulo {
+    display: inline-block;
+    vertical-align: middle;
+    color: #B30733;
+    text-align: left;
+    font-size: 23px;
+    font-family: montserrat;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .linha {
+    display: inline-block;
+    height: 2px;
+    background-color: #ccc;
+    width: 80%;
+    vertical-align: middle;
+  }
+
+  .botaoImagem {
+    width: 100%;
+    height: 320px;
+    border: 1px solid #2E476533;
+    border-radius: 20px;
+    /* background-color: white; */
+  }
+
+  .imagemPizzaria1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../../assets/img/pizzariamatexpequena.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 154px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .subtituloPizzaria1 {
+    font-size: 17px;
+    font-family: montserrat;
+    text-align: left;
+    color: #B30733;
+    margin-left: 18px;
+  }
+
+  .coracao {
+    width: 17px;
+    height: 15px;
+    margin-left: 230px;
+  }
+
+  .avaliacoes1 {
+    text-align: left;
+    margin-left: 18px;
+  }
+
+  .tipoPizza {
+    display: inline-block;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #2E47650D;
+    padding: 2px;
+    width: 80px;
+    height: 24px;
+    border-radius: 10px;   
+    margin: 20px;
+    
+  }
+
+ 
+  .estrelas {
+    color: #EF4C00;
+    margin-right: 40px;
+  }
+
+  .clock {
+    width: 20px;
+    height: 20px;
+  }
+
+  .imagemPizzaria2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../../assets/img/pizzariaerivaxpequena.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 154px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .imagemPizzaria3 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../../assets/img/pizzariacairopequena.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 154px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  /* .botaoPizza {
+    width: 100%;
+    height: 154px;
+    border-radius: 20px 20px 0px 0px;
+  } */
+
+  
