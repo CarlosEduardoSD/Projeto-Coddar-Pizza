@@ -3,6 +3,10 @@
     padding: 0;
   }
 
+  input[type="radio"] {
+    display: none;
+  }
+
   .titulo {
     display: inline-block;
     vertical-align: middle;
@@ -17,15 +21,16 @@
 
   .linha {
     display: inline-block;
-    height: 2px;
-    background-color: #ccc;
-    width: 80%;
+    height: 3px;
+    color: #2E4765;
+    opacity: 0.2;
+    width: 87%;
     vertical-align: middle;
   }
 
   .botaoImagem {
     width: 100%;
-    height: 320px;
+    /* height: 320px; */
     border: 1px solid #2E476533;
     border-radius: 20px;
     /* background-color: white; */
@@ -35,56 +40,84 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url(../../assets/img/pizzariamatexpequena.png);
+    /* background-image: url(../../assets/img/pizzariamatexpequena.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     width: 100%;
-    height: 154px;
+    height: 200px;
     border-radius: 20px 20px 0px 0px;
   }
 
+  .pratoIcon {
+    position: relative;
+    top: 159px;
+    left: 13px;
+    background-color: transparent;
+    width: 35px;
+    height: 34px;
+  }
+
   .subtituloPizzaria1 {
-    font-size: 17px;
+    font-size: 21px;
+    font-weight: 500;
     font-family: montserrat;
     text-align: left;
     color: #B30733;
-    margin-left: 18px;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 18px; */
   }
 
   .coracao {
-    width: 17px;
-    height: 15px;
-    margin-left: 230px;
+    cursor: pointer;
+    /* width: 17px; */
+    /* height: 15px; */
+    /* margin-left: 230px; */
   }
 
   .avaliacoes1 {
+    display: flex;
+    gap: 12px;
+    color: #2E4765;
+    font-weight: 500;
     text-align: left;
-    margin-left: 18px;
+    margin: 0 0 16px 0;
+    /* margin-left: 18px; */
   }
 
   .tipoPizza {
-    display: inline-block;
-    justify-content: space-between;
-    flex-direction: column;
+    /* display: inline-block; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
     background-color: #2E47650D;
-    padding: 2px;
     width: 80px;
-    height: 24px;
-    border-radius: 10px;   
-    margin: 20px;
-    
+    /* height: 24px; */
+    border-radius: 20px;   
+    margin: 0px;
+    padding: 6.17px 5.48px;
+    opacity: 80%;
+    font-weight: 400;
+    color: #2E4765;
   }
 
- 
+  .tempoPizza {
+    color: #2E4765;
+    font-weight: 500;
+  }
+
   .estrelas {
+    width: 13px;
+    height: 13px;
     color: #EF4C00;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   }
 
   .clock {
-    width: 20px;
-    height: 20px;
+    margin-right: 3px;
+    vertical-align: sub;
   }
 
   .imagemPizzaria2 {
