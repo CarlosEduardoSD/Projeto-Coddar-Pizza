@@ -10,34 +10,36 @@ import coracaoPreenchido from "../../assets/icons/coracaopreenchido.svg";
 import coracaoBorda from "../../assets/icons/coracaoborda.svg";
 import clock from "../../assets/icons/clock.svg";
 
-export default function LojaComponet({ loja }) {
+export default function LojaComponet({ loja, onClick }) {
   const [favHeart, setFavHeart] = useState(false);
 
   return (
-    <div className="col-md-4" key={loja.id}>
+    <div className="col-md-4">
       <div className={styles.botaoImagem}>
         <div className={styles.imagemPizzaria1} style={{ backgroundImage: `url(${loja.img})` }}>
           <img src={pratoIcon} alt="" className={styles.pratoIcon}/>
         </div>
         <div style={{ margin: "12px 19px" }}>
-          <p className={styles.subtituloPizzaria1}>
-            {loja.nome}
-            {favHeart ? (
-              <img
-                onClick={() => setFavHeart(false)}
-                src={coracaoPreenchido}
-                className={styles.coracao}
-                alt=""
-              />
-            ) : (
-              <img
-                onClick={() => setFavHeart(true)}
-                src={coracaoBorda}
-                className={styles.coracao}
-                alt=""
-              />
-            )}
-          </p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <p className={styles.subtituloPizzaria1} style={{cursor: "pointer"}} onClick={onClick}>
+              {loja.nome}
+            </p>
+              {favHeart ? (
+                <img
+                  onClick={() => setFavHeart(false)}
+                  src={coracaoPreenchido}
+                  className={styles.coracao}
+                  alt=""
+                />
+              ) : (
+                <img
+                  onClick={() => setFavHeart(true)}
+                  src={coracaoBorda}
+                  className={styles.coracao}
+                  alt=""
+                />
+              )}
+          </div>
           <p className={styles.avaliacoes1}>
             <div style={{ display: "flex", gap: "2px" }}>
               {[...Array(5)].map((item, index) => {

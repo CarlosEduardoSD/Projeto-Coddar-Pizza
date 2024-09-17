@@ -84,7 +84,8 @@
 }
 
 .menu_link {
-  color: black;
+  color: #2E4765;
+  font-weight: 500;
   padding: 8px 8px 38px 8px;
   border-radius: 0;
   text-decoration: none;
