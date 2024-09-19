@@ -1,63 +1,65 @@
-import React from "react";
 import styles from "../Lojas/lojas.module.css";
 
-import coracaoPreenchido from "../../assets/icons/coracaopreenchido.svg";
-import coracaoBorda from "../../assets/icons/coracaoborda.svg";
-import clock from "../../assets/icons/clock.svg";
+import LojasButton from "./LojasButton";
 
-export  default function lojas(){
-    return(
-        <>
-            <div className="container text-center">
-                <div className="row">
-                    <h4 className={styles.titulo}>Populares <div className={styles.linha}></div></h4>
-                    <div className="col">
-                        <div className={styles.botaoImagem}>
-                                <div className={styles.imagemPizzaria1}>
-                                </div>
-                                <p className={styles.subtituloPizzaria1}>Pizzaria Matex <img src={coracaoPreenchido} className={styles.coracao} alt="" /></p>
-                                <p className={styles.avaliacoes1}><span className={styles.estrelas} >&#9733;&#9733;&#9733;&#9733;&#9733;</span> 32 avaliações</p>
-                                <div>
-                                    <span className={styles.tipoPizza}>Brasileira</span>
-                                    <span className={styles.tipoPizza}>Média</span>
-                                    <span className={`${styles.tipoPizza}${styles.tempoPizza}`}><img src={clock} className={styles.clock}  alt="" /> 20-30</span>
-                                </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className={styles.botaoImagem}>
-                                <div className={styles.imagemPizzaria2}>
-                                </div>
-                            <div>
-                                <p>Pizzaria Erivax <img src={coracaoBorda} className={styles.coracao} alt="" /></p>
-                                <p className={styles.avaliacoes1}><span className={styles.estrelas} >&#9733;&#9733;&#9733;&#9733;&#9733;</span> 20 avaliações</p>
-                                <div>
-                                    <span className={styles.tipoPizza}>Italiana</span>
-                                    <span className={styles.tipoPizza}>Broto</span>
-                                    <span className={`${styles.tipoPizza}${styles.tempoPizza}`}><img src={clock} className={styles.clock}  alt="" /> 10-20</span>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    <div className="col">
-                        <div className={styles.botaoImagem}>
-                                <div className={styles.imagemPizzaria3}>
-                                </div>
-                            <div>
-                                <p>Pizzaria Cairo <img src={coracaoPreenchido} className={styles.coracao} alt="" /></p>
-                                <p className={styles.avaliacoes1}><span className={styles.estrelas} >&#9733;&#9733;&#9733;&#9733;&#9733;</span> 45 avaliações</p>
-                                <div>
-                                <div>
-                                    <span className={styles.tipoPizza}>Italiana</span>
-                                    <span className={styles.tipoPizza}>Giga</span>
-                                    <span className={`${styles.tipoPizza}${styles.tempoPizza}`}><img src={clock} className={styles.clock}  alt="" /> 25-35</span>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+import imgMatex from "../../assets/img/pizzariamatexpequena.png";
+import imgErivax from "../../assets/img/pizzariaerivaxpequena.png";
+import imgCairo from "../../assets/img/pizzariacairopequena.png";
+
+import imgCairoApresentacao from "../../assets/img/bannerpizza2.png"
+export default function lojas({ onLojaClick }) {
+  const lojas = [
+    {
+      id: 1,
+      img: imgMatex,
+      nome: "Pizzaria Matex",
+      avaliacoes: 32,
+      estrelas: 4,
+      tipo: "Brasileira",
+      tamanho: "Média",
+      tempo: "20-30",
+      horario: "18:30 a 23:00",
+    },
+    {
+      id: 2,
+      img: imgErivax,
+      img_apresentacao: imgCairoApresentacao,
+      nome: "Pizzaria Erivax",
+      avaliacoes: 20,
+      estrelas: 3,
+      tipo: "Italiana",
+      tamanho: "Broto",
+      tempo: "10-20",
+      horario: "18:00 a 23:00",
+    },
+    {
+      id: 3,
+      img: imgCairo,
+      nome: "Pizzaria Cairo",
+      avaliacoes: 45,
+      estrelas: 5,
+      tipo: "Italiana",
+      tamanho: "Giga",
+      tempo: "25-35",
+      horario: "19:30 a 00:00",
+    }
+  ];
+  return (
+    <>
+      <div className="container text-center">
+        <div className="row">
+          <div style={{display: "flex", justifyContent: "space-between"}}>
+              <h4 className={styles.titulo}>
+                Populares
+              </h4>
+              <hr className={styles.linha}></hr>
+          </div>
+          {lojas.map((loja) => (
+             <LojasButton key={loja.id} loja={loja} onClick={() => onLojaClick(loja)}/>
+          ))}
+        </div>
+        <hr className={styles.linha2}></hr>
+      </div>
+    </>
+  );
 }
