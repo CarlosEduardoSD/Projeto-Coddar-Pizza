@@ -20,21 +20,6 @@ export default function Pizza() {
 
   return (
     <>
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className={styles.cardapio_title}>
-              <h4>Nosso Cardápio</h4>
-            </div>
-          </div>
-          <div className={styles.pizza_container}>
-            {items.map((item, index) => (
-              <PizzaButton key={index} item={item} />
-            ))}
-          </div>
-        </div>
-      </div> */}
-
       <div className="container">
         <div className="row">
           <div className="col-md-12">
