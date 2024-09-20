@@ -51,3 +51,47 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 1400px) {
+  .pizza_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pizza_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cardapio_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .pizza_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pizza_img {
+    width: 300px;
+  }
+
+  .cardapio_item {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .pizza_container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
