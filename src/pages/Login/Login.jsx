@@ -60,7 +60,7 @@ const Login = () => {
                                     <button className={styles.botaoBox}>Acessar</button><br />
                                     
                                     <div className={styles.conta}>
-                                        <a href="">Criar uma conta</a>
+                                        <a href="/register">Criar uma conta</a>
                                     </div>
                                 </form>
                                 <div className={styles.loginFooter}>

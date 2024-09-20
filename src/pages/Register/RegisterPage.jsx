@@ -2,7 +2,35 @@ import styles from "./RegisterPage.module.css";
 
 import AppleIcon from "../../assets/icons/AppleIcon.svg";
 import GooglePlayIcon from "../../assets/icons/PlayStoreIcon.svg";
+
+import axios from "axios";
+
+import { useState } from "react";
 function RegisterPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState(0);
+  const [confirmPassword, setConfirmPassword] = useState(0);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Aqui poderia ser feito a lógica para registrar o usuário
+    if (password === confirmPassword) {
+      const userData = {
+        name: name,
+        email: email,
+        password: password,
+      };
+
+      axios
+        .post("http://localhost:3000/register", userData)
+        .then((response) => console.log(response.data))
+        .catch((error) => console.log(error));
+    } else {
+      alert("As senhas não correspondem");
+    }
+  };
+
   return (
     <div className={styles.body_register}>
       <div className={styles.register}>
@@ -40,7 +68,7 @@ function RegisterPage() {
                       <p
                         style={{
                           backgroundColor: "transparent",
-                          
+
                           fontSize: "11px",
                           margin: "0",
                         }}
@@ -108,7 +136,7 @@ function RegisterPage() {
                 <h2>CADASTRAR-SE</h2>
                 <hr></hr>
                 <span className={styles.regular}></span>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className={styles.register_input_box}>
                     <input
                       type="text"
@@ -116,6 +144,7 @@ function RegisterPage() {
                       placeholder="Nome completo"
                       autoFocus
                       required
+                      onChange={(e) => setName(e.target.value)}
                     ></input>
                   </div>
                   <div className={styles.register_input_box}>
@@ -124,6 +153,7 @@ function RegisterPage() {
                       name="e-mail"
                       placeholder="E-mail"
                       required
+                      onChange={(e) => setEmail(e.target.value)}
                     ></input>
                   </div>
 
@@ -132,6 +162,8 @@ function RegisterPage() {
                       type="password"
                       name="password"
                       placeholder="Senha"
+                      required
+                      onChange={(e) => setPassword(e.target.value)}
                     ></input>
                   </div>
                   <div className={styles.register_input_box}>
@@ -139,11 +171,15 @@ function RegisterPage() {
                       type="password"
                       name="password"
                       placeholder="Confirmar Senha"
+                      required
+                      onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
                   </div>
                 </form>
 
-                <button className={styles.register_button}>Registrar-se</button>
+                <button className={styles.register_button} type="submit">
+                  Registrar-se
+                </button>
 
                 <div className={styles.register_footer}>
                   <p>Codar Pizzaria 2020</p>
