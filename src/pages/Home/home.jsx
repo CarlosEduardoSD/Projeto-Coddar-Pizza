@@ -7,8 +7,6 @@ import Lojas from "../../components/Lojas/lojas";
 
 import { useState } from "react";
 
-import { useState } from "react";
-
 export default function Home() {
   const [lojaSelecionada, setLojaSelecionada] = useState(null);
   
