@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background-image: url("../../assets/img/bannerpizza2.png");
+  /* background-image: url("../../assets/img/bannerpizza2.png"); */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -17,7 +17,7 @@
   background: transparent;
   color: #b30733;
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 500;
   text-align: right;
 }
 
@@ -25,7 +25,7 @@
   background: transparent;
   color: #b30733;
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 500;
   opacity: 1;
   text-align: right;
 }
@@ -36,22 +36,24 @@
   font-size: 20px;
   opacity: 1;
   text-align: right;
+  font-weight: 500;
 }
 
 .banner_description_type_container {
   background: transparent;
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 20px;
 }
 
 .banner_description_type {
   background: #f1f1f1;
-  color: #ff4a40;
+  color: #2E4765;
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 20px;
   text-align: center;
+  opacity: 0.8;
 }
 
 .button_container {

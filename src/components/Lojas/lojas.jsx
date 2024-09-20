@@ -1,6 +1,6 @@
 import styles from "../Lojas/lojas.module.css";
 
-import LojasButton from "./LojasButton";
+import LojaComponent from "./lojaComponet";
 
 import imgMatex from "../../assets/img/pizzariamatexpequena.png";
 import imgErivax from "../../assets/img/pizzariaerivaxpequena.png";
@@ -55,7 +55,7 @@ export default function lojas({ onLojaClick }) {
               <hr className={styles.linha}></hr>
           </div>
           {lojas.map((loja) => (
-             <LojasButton key={loja.id} loja={loja} onClick={() => onLojaClick(loja)}/>
+             <LojaComponent key={loja.id} loja={loja} onClick={() => onLojaClick(loja)}/>
           ))}
         </div>
         <hr className={styles.linha2}></hr>
