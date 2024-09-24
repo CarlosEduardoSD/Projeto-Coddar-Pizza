@@ -3,31 +3,40 @@ import styles from "./RegisterPage.module.css";
 import AppleIcon from "../../assets/icons/AppleIcon.svg";
 import GooglePlayIcon from "../../assets/icons/PlayStoreIcon.svg";
 
-import axios from "axios";
+import Cookies from "js-cookie";
 
-import { useState } from "react";
+import { api } from "../../lib/api";
+
+import { useRef } from "react";
 function RegisterPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(0);
-  const [confirmPassword, setConfirmPassword] = useState(0);
+  const nome = useRef();
+  const email = useRef();
+  const senha = useRef();
+  const confirmSenha = useRef();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aqui poderia ser feito a lógica para registrar o usuário
-    if (password === confirmPassword) {
-      const userData = {
-        name: name,
-        email: email,
-        password: password,
-      };
-
-      axios
-        .post("http://localhost:3000/register", userData)
-        .then((response) => console.log(response.data))
-        .catch((error) => console.log(error));
-    } else {
-      alert("As senhas não correspondem");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const userData = {
+      nome: nome.current.value,
+      email: email.current.value,
+      senha: senha.current.value,
+    };
+    if (senha.current.value !== confirmSenha.current.value) {
+      alert("As senhas devem ser iguais");
+      return;
+    }
+    const response = await api.post("/usuarios", userData);
+    console.log(response);
+    
+    if (response.status === 201) {
+      Cookies.set("token", response.data.id, {
+        expires: 7, // 7 days
+        path: "/",
+      });
+      localStorage.setItem("chave", response.data.id);
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 2000 /*1 second*/);
     }
   };
 
@@ -36,7 +45,7 @@ function RegisterPage() {
       <div className={styles.register}>
         <div className="container">
           <div className="row">
-            <div className="col-md-6" >
+            <div className="col-md-6">
               <div className={styles.register_first_part}>
                 <div
                   style={{
@@ -144,7 +153,7 @@ function RegisterPage() {
                       placeholder="Nome completo"
                       autoFocus
                       required
-                      onChange={(e) => setName(e.target.value)}
+                      ref={nome}
                     ></input>
                   </div>
                   <div className={styles.register_input_box}>
@@ -153,7 +162,7 @@ function RegisterPage() {
                       name="e-mail"
                       placeholder="E-mail"
                       required
-                      onChange={(e) => setEmail(e.target.value)}
+                      ref={email}
                     ></input>
                   </div>
 
@@ -163,7 +172,7 @@ function RegisterPage() {
                       name="password"
                       placeholder="Senha"
                       required
-                      onChange={(e) => setPassword(e.target.value)}
+                      ref={senha}
                     ></input>
                   </div>
                   <div className={styles.register_input_box}>
@@ -172,15 +181,16 @@ function RegisterPage() {
                       name="password"
                       placeholder="Confirmar Senha"
                       required
-                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      ref={confirmSenha}
                     ></input>
                   </div>
+                  <button
+                    className={styles.register_button}
+                    type="submit"
+                  >
+                    Registrar-se
+                  </button>
                 </form>
-
-                <button className={styles.register_button} type="submit">
-                  Registrar-se
-                </button>
-
                 <div className={styles.register_footer}>
                   <p>Codar Pizzaria 2020</p>
                 </div>
