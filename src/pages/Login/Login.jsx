@@ -3,6 +3,7 @@ import styles from "./Login.module.css";
 import appleicone from "../../assets/icons/AppleIcon.svg";
 import googleicone from "../../assets/icons/PlayStoreIcon.svg";
 import { api } from "../../lib/api";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,8 +18,10 @@ const Login = () => {
     // console.log(loginData);
     try {
       const response = await api.post("/login", loginData);
+      const idUser = response.data.user.id;
       if (response.status === 200) {
-        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("token", idUser);
+        Cookies.set("token", idUser, { expires: 7 });
         window.location.href = "/";
       }
     } catch (error) {

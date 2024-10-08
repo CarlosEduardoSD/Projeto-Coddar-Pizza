@@ -1,18 +1,20 @@
 import React from "react";
 import styles from "./header.module.css";
-
-// import Hamburger from "../../assets/img/hamburger.svg";
 import Perfil from "../../assets/img/Perfil.png";
-// import bag from "../assets/img/bag.svg";
-
 import { FaCartArrowDown } from "react-icons/fa6";
+import Cookies from "js-cookie";
 
 export default function Header() {
   return (
     <>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <h1 className={styles.header_title} href="/" style={{cursor: "pointer"}} onClick={() => window.location.reload()}>
+          <h1
+            className={styles.header_title}
+            href="/"
+            style={{ cursor: "pointer" }}
+            onClick={() => window.location.reload()}
+          >
             Codar Pizzaria
           </h1>
           <button
@@ -37,7 +39,11 @@ export default function Header() {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
+                <a
+                  className={`${styles.menu_link} ${styles.cart}`}
+                  aria-current="page"
+                  href="#"
+                >
                   Perfil
                   <img
                     className={styles.sidebar_img}
@@ -77,14 +83,46 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a  className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
+                <a
+                  className={`${styles.menu_link} ${styles.cart}`}
+                  aria-current="page"
+                  href="#"
+                >
                   Carrinho
                 </a>
               </li>
             </ul>
             <div className={styles.button_area} id="#navbarNav">
-              <div className={styles.home_img}>
-                <img className="img-fluid" src={Perfil} alt="Foto Perfil" />
+              <div class="dropdown">
+                <button
+                  class="btn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ padding: "0", border: "none" }}
+                >
+                  <div className={styles.home_img}>
+                    <img className="img-fluid" src={Perfil} alt="Foto Perfil" />
+                  </div>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onClick={() => {
+                        Cookies.remove("token"), window.location.reload();
+                      }}
+                      style={{
+                        cursor: "pointer",
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      Sair
+                    </a>
+                  </li>
+                </ul>
               </div>
               <div
                 className={styles.divider_vertical}
