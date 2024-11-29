@@ -2,8 +2,7 @@ import Header from "../../components/Header/header";
 import OurMenu from "../../components/Menu/OurMenu";
 import Banner from "../../components/Banner/banner";
 import BannerPizzaria from "../../components/BannerPizzaria/BannerPizzaria";
-import Pizza from "../../components/pizzas/pizza";
-import Lojas from "../../components/Lojas/lojas";
+import Pizza from "../../components/pizzas/pizza"; import Lojas from "../../components/Lojas/lojas";
 
 import Cookies from "js-cookie";
 
@@ -43,7 +42,7 @@ export default function Home() {
         <>
           <Banner />
           <OurMenu />
-          <Lojas onLojaClick={handleClick} />
+           <Lojas onLojaClick={handleClick} /> 
         </>
       )}
     </>

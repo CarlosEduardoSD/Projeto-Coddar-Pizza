@@ -1,18 +1,38 @@
 import styles from "./RegisterPage.module.css";
-
+import { useRef, useState } from "react";
 import AppleIcon from "../../assets/icons/AppleIcon.svg";
 import GooglePlayIcon from "../../assets/icons/PlayStoreIcon.svg";
-
 import Cookies from "js-cookie";
-
 import { api } from "../../lib/api";
+import { z } from "zod";
 
-import { useRef } from "react";
+
 function RegisterPage() {
   const nome = useRef();
   const email = useRef();
   const senha = useRef();
   const confirmSenha = useRef();
+
+  const [errors, setErrors] = useState({ nome:"", email: "", senha: "", confirmSenha:""});
+
+  const schemaValidation = z.object({
+    email: z.string().email("E-mail invalido"),
+    senha: z.string().min(5, "Senha precisa ter no mínimo 5 caracteres"),
+    nome: z.string().min(6, "Nome precisa ter no mínimo 6 caracteres"),
+    confirmSenha: z.string().refine(value => /[0-9]/.test(value), {
+      message: 'A senha deve conter pelo menos 1 número',
+    })
+    .refine(value => /[!@#$%^&*(),.?":{}|<>]/.test(value), {
+      message: 'A senha deve conter pelo menos 1 caractere especial',
+    })
+    .refine(value => /[A-Z]/.test(value), {
+      message: 'A senha deve conter pelo menos 1 letra maiúscula',
+    })
+    .refine(value => /[a-z]/.test(value), {
+      message: 'A senha deve conter pelo menos 1 letra minúscula',
+    })
+  });
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,14 +40,30 @@ function RegisterPage() {
       nome: nome.current.value,
       email: email.current.value,
       senha: senha.current.value,
+      confirmSenha: confirmSenha.current.value,
     };
-    if (senha.current.value !== confirmSenha.current.value) {
-      alert("As senhas devem ser iguais");
+
+    const validation = schemaValidation.safeParse(userData);  //safeParse = colocar os dados que sao validados 
+    if (!validation.success) {
+
+      const errorMessages = {};
+      validation.error.issues.forEach((issue) => {
+        errorMessages[issue.path[0]] = issue.message;
+      });
+      setErrors(errorMessages);
       return;
+    } else {
+      setErrors({nome:"", email: "", senha: "", confirmSenha: "" });
     }
+
+
+    // if (senha.current.value !== confirmSenha.current.value) {
+    //   alert("As senhas devem ser iguais");
+    //   return;
+    // }
     const response = await api.post("/usuarios", userData);
     console.log(response);
-    
+
     if (response.status === 201) {
       Cookies.set("token", response.data.id, {
         expires: 7, // 7 days
@@ -152,18 +188,21 @@ function RegisterPage() {
                       name="nome"
                       placeholder="Nome completo"
                       autoFocus
-                      required
                       ref={nome}
                     ></input>
+                    {errors.nome && (<p className={styles.errorMessages}>{errors.nome}</p>
+                    )}
                   </div>
                   <div className={styles.register_input_box}>
                     <input
-                      type="email"
+                      type="text"
                       name="e-mail"
                       placeholder="E-mail"
-                      required
+                      
                       ref={email}
                     ></input>
+                    {errors.email && (<p className={styles.errorMessages}>{errors.email}</p>
+                    )}
                   </div>
 
                   <div className={styles.register_input_box}>
@@ -174,7 +213,10 @@ function RegisterPage() {
                       required
                       ref={senha}
                     ></input>
+                    {errors.senha && (<p className={styles.errorMessages}>{errors.senha}</p>
+                    )}
                   </div>
+
                   <div className={styles.register_input_box}>
                     <input
                       type="password"
@@ -183,6 +225,8 @@ function RegisterPage() {
                       required
                       ref={confirmSenha}
                     ></input>
+                     {errors.confirmSenha && (<p className={styles.errorMessages}>{errors.confirmSenha}</p>
+                    )}
                   </div>
                   <button
                     className={styles.register_button}

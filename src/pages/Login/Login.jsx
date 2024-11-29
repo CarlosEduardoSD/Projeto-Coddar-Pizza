@@ -1,9 +1,71 @@
-import React from 'react';
+import { useRef, useState } from "react";
 import styles from './Login.module.css';
 import appleicone from '../../assets/icons/AppleIcon.svg';
 import googleicone from '../../assets/icons/PlayStoreIcon.svg';
 
-const Login = () => {
+import Cookies from "js-cookie";
+
+import { api } from "../../lib/api";
+import { z } from "zod";
+
+function Login() {
+    const [errors, setErrors] = useState({ email: "", senha: ""});
+    
+    const email = useRef();
+    const senha = useRef();
+    
+    //Criando o schema de validação
+    const schemaValidation = z.object({
+        email: z.string().email("E-mail invalido"),
+        senha: z.string().min(5, "Senha precisa ter no mínimo 5 caracteres"),
+    }); //Armazenamento dos dados
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const loginData = {
+            email: email.current.value,
+            senha: senha.current.value,
+          };
+        
+          const validation = schemaValidation.safeParse(loginData);  //safeParse = colocar os dados que sao validados 
+          if(!validation.success){
+            
+            const errorMessages = {};
+            validation.error.issues.forEach((issue) => {
+                errorMessages[issue.path[0]] = issue.message;
+            });
+            setErrors(errorMessages);
+            return;
+          } else {
+            setErrors({ email: "", senha: ""});
+          }
+   
+        // Enviar dados de login para a API
+        const response = await api.post("/login", loginData);
+        console.log(response);
+        
+        if (response.status === 200) {
+          // Armazenar o token nos cookies e no armazenamento local
+          Cookies.set("token", response.data.id, {
+            expires: 7, // 7 dias
+            path: "/",
+          });
+          localStorage.setItem("chave", response.data.id);
+          
+          
+          // Redirecionar após 2 segundos
+          setTimeout(() => {
+            window.location.href = '/';
+          }, 2000 /*2 segundos*/);
+        } 
+        //else {
+        //   alert("Falha ao fazer login. Verifique suas credenciais.");
+        // }
+      };
+  
+
+
+
     return (
         <div className={styles.bodyLogin}>
             <div className={styles.pageLogin}>
@@ -45,13 +107,19 @@ const Login = () => {
                                 <hr />
                                 <span className={styles.loginLinha}></span>
 
-                                <form className={styles.formularioBox} action="">
+                                <form onSubmit={handleSubmit} className={styles.formularioBox} action="">
                                     <div className={styles.inputBoxPrincipal}>
                                         <div className={styles.loginInputBox}>
-                                            <input type="email" name="email" id="email" placeholder='E-mail'  required />
+                                            <input type="text" name="email" id="email" placeholder='E-mail' ref={email}/>
+                                            {errors.email && (
+                                                <p className={styles.errorMessages}>{errors.email}</p>
+                                            )}
                                         </div>
                                         <div className={styles.loginInputBox}>
-                                            <input type="password" name="password" id="password" placeholder='Senha' required />
+                                            <input type="password" name="password" id="password" placeholder='Senha' ref={senha}/>
+                                            {errors.senha && (
+                                                <p className={styles.errorMessages}>{errors.senha}</p>
+                                            )}
                                         </div>
                                     </div>
                                     <div className={styles.senha}>
@@ -75,6 +143,6 @@ const Login = () => {
 
         </div>
     )
-  };
+  }
 
-export default Login
+export default Login;

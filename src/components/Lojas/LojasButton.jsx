@@ -16,7 +16,8 @@ export default function LojasButton({ loja, onClick }) {
   return (
     <div className="col-md-4">
       <div className={styles.botaoImagem}>
-        <div className={styles.imagemPizzaria1} style={{ backgroundImage: `url(${loja.img})` }}>
+        
+        <div className={styles.imagemPizzaria1} style={{ backgroundImage: `url(${loja.pizzasImagem})` }}>
           <img src={pratoIcon} alt="" className={styles.pratoIcon}/>
         </div>
         <div style={{ margin: "12px 19px" }}>

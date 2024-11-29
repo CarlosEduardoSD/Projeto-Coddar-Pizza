@@ -1,18 +1,21 @@
 import React from "react";
 import styles from "./header.module.css";
+import Cookies from "js-cookie";
 
 // import Hamburger from "../../assets/img/hamburger.svg";
 import Perfil from "../../assets/img/Perfil.png";
 // import bag from "../assets/img/bag.svg";
 
 import { FaCartArrowDown } from "react-icons/fa6";
+import { GiToken } from "react-icons/gi";
 
 export default function Header() {
   return (
     <>
+
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <h1 className={styles.header_title} href="/" style={{cursor: "pointer"}} onClick={() => window.location.reload()}>
+          <h1 className={styles.header_title} href="/" style={{ cursor: "pointer" }} onClick={() => window.location.reload()}>
             Codar Pizzaria
           </h1>
           <button
@@ -77,15 +80,26 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a  className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
+                <a className={`${styles.menu_link} ${styles.cart}`} aria-current="page" href="#">
                   Carrinho
                 </a>
               </li>
             </ul>
             <div className={styles.button_area} id="#navbarNav">
-              <div className={styles.home_img}>
-                <img className="img-fluid" src={Perfil} alt="Foto Perfil" />
+
+
+              <div className="dropdown">
+                <button className="btn  " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ padding: "0px", border: "none" }}>
+                  <div className={styles.home_img}>
+                  <img className="img-fluid" src={Perfil} alt="Foto Perfil" />
+                  </div>
+                </button>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" onClick={() => {Cookies.remove('token'), window.location.href='/login'}} >Logout</a></li>
+                 
+                </ul>
               </div>
+
               <div
                 className={styles.divider_vertical}
                 style={{

@@ -253,6 +253,11 @@
     text-decoration: none;
     color: black;
 }
+.errorMessages{
+  margin-top: 4px;
+  font-size: 14px;
+  color: #dc2626;
+}
 
 /*Começo do responsivo - 1024px*/
 

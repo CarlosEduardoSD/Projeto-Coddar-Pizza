@@ -6,7 +6,7 @@ function OurMenu() {
   return (
     <div className={styles.body_ourmenu}>
       <div className={styles.ourmenu}>
-        <div className="conta">
+        <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className={styles.menu_ourmenu}>

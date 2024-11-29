@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
   
 .register {
@@ -190,6 +191,13 @@
 .register_footer p {
   margin: 0;
 }
+
+.errorMessages{
+  margin-top: 4px;
+  font-size: 14px;
+  color: #dc2626;
+}
+
 @media (max-width: 1199px) {
   .body_register {
     display: flex;
